@@ -105,20 +105,22 @@ section h2:hover {
 #hero {
   width: 100%;
   height: 100vh;
-  background: url('/hero.gif') top center;
-  background-size: cover;
+  background: url('/hero.gif') center center / cover no-repeat;
   position: relative;
   display: flex;
   align-items: center;
-  justify-content: center; /* Center the content horizontally */
-  text-align: center; /* Center the text */
-  margin-top: 80px; /* Adjust based on your navbar height */
+  justify-content: center;
+  text-align: center;
+  margin-top: 80px;
 }
 
 #hero .container {
   position: relative;
   z-index: 2;
-  padding: 0 15px; /* Add padding for better alignment */
+  padding: 0 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 #hero:before {
@@ -132,22 +134,33 @@ section h2:hover {
   z-index: 1;
 }
 
-#hero h1 {
+#hero h1,
+#hero h2 {
   color: #fff;
+  margin: 0;
+}
+
+#hero h1 {
   font-size: 3rem;
   font-weight: bold;
+  line-height: 1.2;
 }
 
 #hero h2 {
-  color: #fff;
   font-size: 1.5rem;
   margin-top: 10px;
+  line-height: 1.2;
 }
 
 #hero .btn-primary {
   margin-top: 20px;
   color: #fff;
-  border-color: #fff;
+  background-color: #007bff;
+  border-color: #007bff;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 50px;
+  transition: background-color 0.3s, border-color 0.3s;
 }
 
 #hero .btn-primary:hover {
@@ -156,25 +169,41 @@ section h2:hover {
   border-color: #004085;
 }
 
-/* Media Queries for Mobile */
-@media (max-width: 768px) {
+/* Media Queries for Tablets and Mobile */
+@media (max-width: 1024px) {
   #hero {
     height: auto;
-    padding: 60px 0; 
-    background-size: contain;
-    margin-top: 60px; 
+    padding: 60px 0;
+    background-size: cover;
+    margin-top: 60px;
   }
 
   #hero h1 {
-    font-size: 2rem; 
+    font-size: 2.5rem;
   }
 
   #hero h2 {
-    font-size: 1.2rem; 
+    font-size: 1.3rem;
   }
 
-  #hero .container {
-    padding: 0 10px; 
+  #hero .btn-primary {
+    font-size: 0.9rem;
+    padding: 8px 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  #hero h1 {
+    font-size: 2rem;
+  }
+
+  #hero h2 {
+    font-size: 1.2rem;
+  }
+
+  #hero .btn-primary {
+    font-size: 0.8rem;
+    padding: 8px 16px;
   }
 }
 
