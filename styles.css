@@ -211,6 +211,17 @@ section h2:hover {
 }
 
 /* Services Section */
+#services {
+  padding: 60px 0;
+  font-family: 'Poppins', sans-serif; /* Use Poppins for the Services section */
+}
+
+#services h2 {
+  font-size: 36px;
+  margin-bottom: 40px;
+  font-weight: 600;
+}
+
 .service-item {
   text-align: center;
   padding: 30px;
@@ -218,6 +229,10 @@ section h2:hover {
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
 }
 
 .service-item:hover {
@@ -227,6 +242,26 @@ section h2:hover {
 .service-item i {
   margin-bottom: 20px;
   color: #007bff;
+}
+
+.service-item h4 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.service-item p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Ensure equal height for service items */
+.row > .col-md-4 {
+  display: flex;
+}
+
+.row > .col-md-4 > .service-item {
+  flex-grow: 1;
 }
 
 /* Portfolio Section */
