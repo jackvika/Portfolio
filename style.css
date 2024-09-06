@@ -1,5 +1,7 @@
 body {
     font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 header {
@@ -19,7 +21,7 @@ header {
 }
 
 .hero {
-    background: url('hero-bg.jpg') no-repeat center center/cover;
+    background: url('https://via.placeholder.com/1600x900') no-repeat center center/cover;
     height: 100vh;
     color: #fff;
     text-align: center;
@@ -102,3 +104,4 @@ footer {
         font-size: 1rem;
     }
 }
+
